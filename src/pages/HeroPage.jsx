@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom";
+
 const links = [
-  { name: "Open roles", href: "#" },
-  { name: "Internship program", href: "#" },
-  { name: "Our values", href: "#" },
-  { name: "Meet our leadership", href: "#" },
+  { name: "Our Goles", to: "/" },
+  { name: "Q&A Programme", to: "#" },
+  { name: "Learn with Us", to: "#" },
+  { name: "Meet our Experts", to: "/ourteam"},
 ];
 const stats = [
-  { name: "Offices worldwide", value: "12" },
-  { name: "Full-time colleagues", value: "300+" },
-  { name: "Hours per week", value: "40" },
+  { name: "Total Experts", value: "20" },
+  { name: "Total Students", value: "1500+" },
+  { name: "Reviews", value: "100+" },
   { name: "Paid time off", value: "Unlimited" },
 ];
 
-export default function Example() {
+export default function HeroPage() {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <img
@@ -70,22 +72,25 @@ export default function Example() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Work with us
+            Welcome to the Q&A Expert
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua.
+            Welcome to the QA Expert, your ultimate resource for everything
+            related to quality assurance. Our team of experienced professionals
+            is dedicated to providing you with the knowledge and tools necessary
+            to achieve the highest standards of quality in your products and
+            services.
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+          <Link className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+              
             {links.map((link) => (
-              <a key={link.name} href={link.href}>
+              <a key={link.name} to={link.to}>
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </a>
             ))}
-          </div>
+          </Link>
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col-reverse">

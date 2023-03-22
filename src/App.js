@@ -6,6 +6,7 @@ import Navbar from "./pages/Navbar";
 import './MainCSS.css';
 import HeroPage from "./pages/HeroPage";
 import Contact from "./pages/Contact";
+import Ourteam from "./pages/Ourteam";
 
 const App = () => {
     return (
@@ -17,6 +18,8 @@ const App = () => {
                 <Route exact path="/student/dashboard" element={<StudentDashboard />}></Route>
                 <Route exact path="/expert/dashboard" element={<ExpertDashboard />}></Route>
                 <Route exact path="/contact" element={<Contact />}></Route>
+                <Route exact path="/ourteam" element={<Ourteam/>}></Route>
+                
             </Routes>
           </Router>
         </div>
