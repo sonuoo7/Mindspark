@@ -6,8 +6,8 @@ import Navbar from "./pages/Navbar";
 import './MainCSS.css';
 import HeroPage from "./pages/HeroPage";
 import Contact from "./pages/Contact";
-import Ourteam from "./pages/Ourteam";
-
+import Ourteam from "./components/Home/Ourteam";
+import LearnWithUs from "./components/Home/LearnWithUs";
 const App = () => {
     return (
         <div>
@@ -19,6 +19,8 @@ const App = () => {
                 <Route exact path="/expert/dashboard" element={<ExpertDashboard />}></Route>
                 <Route exact path="/contact" element={<Contact />}></Route>
                 <Route exact path="/ourteam" element={<Ourteam/>}></Route>
+                <Route exact path="/Learn-with-us" element={<LearnWithUs/>}></Route>
+
                 
             </Routes>
           </Router>
