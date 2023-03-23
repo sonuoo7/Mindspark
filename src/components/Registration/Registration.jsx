@@ -1,43 +1,38 @@
 import React, { useState } from "react";
 import { db } from "../../firebase-config";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getDatabase, ref, push } from "firebase/database";
 
 function Registration() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [userType, setUserType] = useState("");
 
   const auth = getAuth();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log(user);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorMessage);
-    });
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
 
-    // auth
-    //   .createUserWithEmailAndPassword(email, password)
-    //   .then((userCredential) => {
-    //     const user = userCredential.user;
-
-    //     db.collection("users").doc(user.uid).set({
-    //       firstName,
-    //       lastName,
-    //       email,
-    //     });
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
+        const registrationData = {
+          firstName,
+          lastName,
+          email,
+          userType,
+        };
+        push(ref(db, `registrations/${user.uid}`), registrationData);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
   };
 
   return (
@@ -74,7 +69,17 @@ function Registration() {
           onChange={(e) => setPassword(e.target.value)}
         />
       </label>
-      <button type="submit" onClick={handleSubmit}>Register</button>
+      <label>
+        User Type:
+        <select value={userType} onChange={(e) => setUserType(e.target.value)}>
+          <option value="">Select User Type</option>
+          <option value="expert">Expert</option>
+          <option value="student">Student</option>
+        </select>
+      </label>
+      <button type="submit" onClick={handleSubmit}>
+        Register
+      </button>
     </form>
   );
 }

@@ -3,12 +3,13 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "your-api-key",
-  authDomain: "your-auth-domain",
-  projectId: "your-project-id",
-  storageBucket: "your-storage-bucket",
-  messagingSenderId: "your-sender-id",
-  appId: "your-app-id",
+  apiKey: "AIzaSyBeQHfgoWN6xRHC4e_Cf57juqPeAjRU4rk",
+  authDomain: "mindspark-db955.firebaseapp.com",
+  databaseURL: "https://mindspark-db955-default-rtdb.firebaseio.com",
+  projectId: "mindspark-db955",
+  storageBucket: "mindspark-db955.appspot.com",
+  messagingSenderId: "608270208973",
+  appId: "1:608270208973:web:69781ac52ca52ed111fe84",
 };
 
 const app = initializeApp(firebaseConfig);
