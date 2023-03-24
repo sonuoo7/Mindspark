@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 const links = [
-  { name: "Our Goles", to: "/" },
-  { name: "Q&A Programme", to: "/" },
+  { name: "Our Goles", to: "/about-us" },
+  { name: "Q&A Programme", to: "/our-program" },
   { name: "Learn with Us", to: "/Learn-with-us" },
-  { name: "Meet our Experts", to: "./ourteam" },
+  { name: "Meet our Experts", to: "/ourteam" },
 ];
 const stats = [
   { name: "Total Experts", value: "20" },
@@ -17,9 +17,9 @@ export default function HeroPage() {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <img
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+        src="https://media.istockphoto.com/id/1018439866/photo/ask-questions-faq-what-where-why-who.jpg?s=612x612&w=0&k=20&c=mRJ6QWpX17dGmRu7eksvsf_v-_5F5ssRjGu-q96pYmI="
         alt=""
-        className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+        className=" absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center filter brightness-50 blur-sm"
       />
       <svg
         viewBox="0 0 1097 845"
@@ -71,7 +71,7 @@ export default function HeroPage() {
       </svg>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <h2 className="text-4xl font-bold tracking-tight text-blue-500 sm:text-6xl">
             Welcome to the Q&A Expert
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -83,8 +83,7 @@ export default function HeroPage() {
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-              
+          <div className="grid grid-cols-1 gap-y-6  gap-x-8 text-lg font-bold leading-7 text-white  sm:grid-cols-6 md:flex lg:gap-x-10">
             {links.map((link) => (
               <Link key={link.name} to={link.to}>
                 {link.name} <span aria-hidden="true">&rarr;</span>
@@ -97,7 +96,7 @@ export default function HeroPage() {
                 <dt className="text-base leading-7 text-gray-300">
                   {stat.name}
                 </dt>
-                <dd className="text-2xl font-bold leading-9 tracking-tight text-white">
+                <dd className="text-2xl font-bold leading-10 tracking-tight text-white">
                   {stat.value}
                 </dd>
               </div>

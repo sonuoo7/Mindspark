@@ -8,6 +8,8 @@ import HeroPage from "./pages/HeroPage";
 import Contact from "./pages/Contact";
 import Ourteam from "./components/Home/Ourteam";
 import LearnWithUs from "./components/Home/LearnWithUs";
+import QAprogram from "./components/Home/QAprogram";
+import AboutUs from "./components/Home/AboutUs";
 const App = () => {
     return (
         <div>
@@ -20,6 +22,8 @@ const App = () => {
                 <Route exact path="/contact" element={<Contact />}></Route>
                 <Route exact path="/ourteam" element={<Ourteam/>}></Route>
                 <Route exact path="/Learn-with-us" element={<LearnWithUs/>}></Route>
+                <Route exact path="/our-program" element={<QAprogram/>}></Route>
+                <Route exact path="/about-us" element={<AboutUs/>}></Route>
 
                 
             </Routes>
