@@ -17,7 +17,7 @@ export default function HeroPage() {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <img
-        src="https://media.istockphoto.com/id/1018439866/photo/ask-questions-faq-what-where-why-who.jpg?s=612x612&w=0&k=20&c=mRJ6QWpX17dGmRu7eksvsf_v-_5F5ssRjGu-q96pYmI="
+        src="https://media.licdn.com/dms/image/C4D12AQGHhV0vhWSAEg/article-cover_image-shrink_720_1280/0/1576020278098?e=2147483647&v=beta&t=vOeaaQWFEN_ok2H9ZRpAMbfiNy_JG0RfeExoOtsOzm8"
         alt=""
         className=" absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center filter brightness-50 blur-sm"
       />
@@ -71,7 +71,7 @@ export default function HeroPage() {
       </svg>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-blue-500 sm:text-6xl">
+          <h2 className="text-4xl font-bold tracking-tight text-blue-300 sm:text-6xl">
             Welcome to the Q&A Expert
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
